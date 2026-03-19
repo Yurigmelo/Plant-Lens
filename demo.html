@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantLens - Demo do Aplicativo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+    
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><h1>🌿 PlantLens</h1></a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#sobre">Sobre</a></li>
+                <li><a href="index.html#recursos">Recursos</a></li>
+                <li><a href="demo.html">Demo</a></li>
+                <li><a href="download.html">Download</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero_demo" class="dobra">
+            <div class="conteudo-centralizado">
+                <h2>Experimente o <span class="destaque">PlantLens</span></h2>
+                <p>Interaja com uma demonstração funcional do nosso aplicativo</p>
+            </div>
+        </section>
+
+        <section class="demo-section dobra">
+            <h2>Demonstração Interativa</h2>
+            <p class="demo-subtitle">Explore as funcionalidades principais do PlantLens</p>
+            
+            <div class="demo-container">
+                <!-- Simulação do celular -->
+                <div class="phone-mockup">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        
+                        <!-- Tela 1: Home -->
+                        <input type="radio" name="screen" id="screen-home" checked hidden>
+                        <div class="app-screen home-screen">
+                            <div class="app-header">
+                                <h3>🌿 PlantLens</h3>
+                            </div>
+                            <div class="app-content">
+                                <div class="welcome-card">
+                                    <h4>Bem-vindo ao PlantLens!</h4>
+                                    <p>Identifique plantas e cuide delas com IA</p>
+                                </div>
+                                
+                                <div class="quick-actions">
+                                    <label for="screen-camera" class="action-btn camera-btn">
+                                        <span class="btn-icon">📸</span>
+                                        <span class="btn-text">Identificar Planta</span>
+                                    </label>
+                                    
+                                    <label for="screen-plants" class="action-btn plants-btn">
+                                        <span class="btn-icon">🌱</span>
+                                        <span class="btn-text">Minhas Plantas</span>
+                                    </label>
+                                </div>
+
+                                <div class="stats-mini">
+                                    <div class="stat-mini">
+                                        <div class="stat-mini-number">12</div>
+                                        <div class="stat-mini-label">Plantas</div>
+                                    </div>
+                                    <div class="stat-mini">
+                                        <div class="stat-mini-number">5</div>
+                                        <div class="stat-mini-label">Aguardando Rega</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="app-nav">
+                                <label for="screen-home" class="nav-item active">
+                                    <span class="nav-icon">🏠</span>
+                                    <span class="nav-label">Início</span>
+                                </label>
+                                <label for="screen-camera" class="nav-item">
+                                    <span class="nav-icon">📷</span>
+                                    <span class="nav-label">Câmera</span>
+                                </label>
+                                <label for="screen-plants" class="nav-item">
+                                    <span class="nav-icon">🌿</span>
+                                    <span class="nav-label">Plantas</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Tela 2: Câmera/Identificação -->
+                        <input type="radio" name="screen" id="screen-camera" hidden>
+                        <div class="app-screen camera-screen">
+                            <div class="app-header">
+                                <label for="screen-home" class="back-btn">← Voltar</label>
+                                <h3>Identificar Planta</h3>
+                            </div>
+                            <div class="app-content">
+                                <div class="camera-preview">
+                                    <div class="camera-frame">
+                                        <div class="scan-line"></div>
+                                        <p class="camera-hint">Posicione a planta no centro</p>
+                                    </div>
+                                </div>
+                                
+                                <label for="screen-result" class="capture-btn">
+                                    <span class="capture-icon">📸</span>
+                                    <span>Capturar e Identificar</span>
+                                </label>
+
+                                <div class="tips-box">
+                                    <h4>💡 Dicas para melhor resultado:</h4>
+                                    <ul>
+                                        <li>Use boa iluminação</li>
+                                        <li>Foque nas folhas</li>
+                                        <li>Evite sombras excessivas</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="app-nav">
+                                <label for="screen-home" class="nav-item">
+                                    <span class="nav-icon">🏠</span>
+                                    <span class="nav-label">Início</span>
+                                </label>
+                                <label for="screen-camera" class="nav-item active">
+                                    <span class="nav-icon">📷</span>
+                                    <span class="nav-label">Câmera</span>
+                                </label>
+                                <label for="screen-plants" class="nav-item">
+                                    <span class="nav-icon">🌿</span>
+                                    <span class="nav-label">Plantas</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Tela 3: Resultado da Identificação -->
+                        <input type="radio" name="screen" id="screen-result" hidden>
+                        <div class="app-screen result-screen">
+                            <div class="app-header">
+                                <label for="screen-camera" class="back-btn">← Voltar</label>
+                                <h3>Resultado</h3>
+                            </div>
+                            <div class="app-content">
+                                <div class="result-card">
+                                    <div class="plant-image-result"></div>
+                                    <div class="result-info">
+                                        <h4>Costela de Adão</h4>
+                                        <p class="scientific-name">Monstera deliciosa</p>
+                                        <div class="confidence">
+                                            <span class="confidence-label">Confiança:</span>
+                                            <div class="confidence-bar">
+                                                <div class="confidence-fill"></div>
+                                            </div>
+                                            <span class="confidence-value">98%</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="care-info">
+                                    <h4>🌱 Cuidados Recomendados:</h4>
+                                    <div class="care-item">
+                                        <span class="care-icon">💧</span>
+                                        <div>
+                                            <strong>Rega:</strong> 1-2 vezes por semana
+                                        </div>
+                                    </div>
+                                    <div class="care-item">
+                                        <span class="care-icon">☀️</span>
+                                        <div>
+                                            <strong>Luz:</strong> Indireta média a alta
+                                        </div>
+                                    </div>
+                                    <div class="care-item">
+                                        <span class="care-icon">🌡️</span>
+                                        <div>
+                                            <strong>Temperatura:</strong> 18-27°C
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <label for="screen-plants" class="add-plant-btn">
+                                    + Adicionar às Minhas Plantas
+                                </label>
+                            </div>
+                            
+                            <div class="app-nav">
+                                <label for="screen-home" class="nav-item">
+                                    <span class="nav-icon">🏠</span>
+                                    <span class="nav-label">Início</span>
+                                </label>
+                                <label for="screen-camera" class="nav-item">
+                                    <span class="nav-icon">📷</span>
+                                    <span class="nav-label">Câmera</span>
+                                </label>
+                                <label for="screen-plants" class="nav-item">
+                                    <span class="nav-icon">🌿</span>
+                                    <span class="nav-label">Plantas</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Tela 4: Minhas Plantas -->
+                        <input type="radio" name="screen" id="screen-plants" hidden>
+                        <div class="app-screen plants-screen">
+                            <div class="app-header">
+                                <label for="screen-home" class="back-btn">← Voltar</label>
+                                <h3>Minhas Plantas</h3>
+                            </div>
+                            <div class="app-content">
+                                <div class="plant-list">
+                                    <label for="screen-detail" class="plant-item">
+                                        <div class="plant-icon">🌿</div>
+                                        <div class="plant-info">
+                                            <strong>Costela de Adão</strong>
+                                            <p>Última rega: há 2 dias</p>
+                                        </div>
+                                        <span class="status-badge ok">✓</span>
+                                    </label>
+
+                                    <div class="plant-item">
+                                        <div class="plant-icon">🌵</div>
+                                        <div class="plant-info">
+                                            <strong>Cacto</strong>
+                                            <p>Última rega: há 5 dias</p>
+                                        </div>
+                                        <span class="status-badge ok">✓</span>
+                                    </div>
+
+                                    <div class="plant-item">
+                                        <div class="plant-icon">🌺</div>
+                                        <div class="plant-info">
+                                            <strong>Rosa do Deserto</strong>
+                                            <p>Última rega: há 4 dias</p>
+                                        </div>
+                                        <span class="status-badge warning">💧</span>
+                                    </div>
+
+                                    <div class="plant-item">
+                                        <div class="plant-icon">🌴</div>
+                                        <div class="plant-info">
+                                            <strong>Palmeira Areca</strong>
+                                            <p>Última rega: há 1 dia</p>
+                                        </div>
+                                        <span class="status-badge ok">✓</span>
+                                    </div>
+                                </div>
+
+                                <label for="screen-camera" class="add-new-plant">
+                                    + Adicionar Nova Planta
+                                </label>
+                            </div>
+                            
+                            <div class="app-nav">
+                                <label for="screen-home" class="nav-item">
+                                    <span class="nav-icon">🏠</span>
+                                    <span class="nav-label">Início</span>
+                                </label>
+                                <label for="screen-camera" class="nav-item">
+                                    <span class="nav-icon">📷</span>
+                                    <span class="nav-label">Câmera</span>
+                                </label>
+                                <label for="screen-plants" class="nav-item active">
+                                    <span class="nav-icon">🌿</span>
+                                    <span class="nav-label">Plantas</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Tela 5: Detalhe da Planta -->
+                        <input type="radio" name="screen" id="screen-detail" hidden>
+                        <div class="app-screen detail-screen">
+                            <div class="app-header">
+                                <label for="screen-plants" class="back-btn">← Voltar</label>
+                                <h3>Costela de Adão</h3>
+                            </div>
+                            <div class="app-content">
+                                <div class="plant-detail-header">
+                                    <div class="plant-image-detail"></div>
+                                    <p class="scientific-name">Monstera deliciosa</p>
+                                </div>
+
+                                <div class="detail-section">
+                                    <h4>📅 Histórico de Cuidados</h4>
+                                    <div class="timeline">
+                                        <div class="timeline-item">
+                                            <div class="timeline-icon">💧</div>
+                                            <div class="timeline-content">
+                                                <strong>Rega realizada</strong>
+                                                <p>há 2 dias</p>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-icon">🌱</div>
+                                            <div class="timeline-content">
+                                                <strong>Fertilização</strong>
+                                                <p>há 1 semana</p>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-icon">✂️</div>
+                                            <div class="timeline-content">
+                                                <strong>Poda</strong>
+                                                <p>há 2 semanas</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="detail-section">
+                                    <h4>🔔 Próximos Cuidados</h4>
+                                    <div class="next-care">
+                                        <div class="care-card">
+                                            <span class="care-icon">💧</span>
+                                            <strong>Rega</strong>
+                                            <p>em 5 dias</p>
+                                        </div>
+                                        <div class="care-card">
+                                            <span class="care-icon">🌱</span>
+                                            <strong>Fertilizar</strong>
+                                            <p>em 3 semanas</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="app-nav">
+                                <label for="screen-home" class="nav-item">
+                                    <span class="nav-icon">🏠</span>
+                                    <span class="nav-label">Início</span>
+                                </label>
+                                <label for="screen-camera" class="nav-item">
+                                    <span class="nav-icon">📷</span>
+                                    <span class="nav-label">Câmera</span>
+                                </label>
+                                <label for="screen-plants" class="nav-item">
+                                    <span class="nav-icon">🌿</span>
+                                    <span class="nav-label">Plantas</span>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Instruções -->
+                <div class="demo-instructions">
+                    <h3>Como usar a demo:</h3>
+                    <div class="instruction-card">
+                        <div class="instruction-icon">👆</div>
+                        <p><strong>Navegue pelas telas</strong> usando os botões na parte inferior do telefone</p>
+                    </div>
+                    <div class="instruction-card">
+                        <div class="instruction-icon">📸</div>
+                        <p><strong>Simule a captura</strong> de uma foto na tela de câmera</p>
+                    </div>
+                    <div class="instruction-card">
+                        <div class="instruction-icon">🌿</div>
+                        <p><strong>Explore suas plantas</strong> e veja detalhes de cuidados</p>
+                    </div>
+                    <div class="instruction-card">
+                        <div class="instruction-icon">🎨</div>
+                        <p><strong>Interface real</strong> do aplicativo PlantLens</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="script.js"></script>
+
+        <section class="dobra cta-section">
+            <h2>Gostou da demonstração?</h2>
+            <p>Baixe o PlantLens e comece a cuidar das suas plantas com tecnologia de IA</p>
+            <a href="download.html">
+                <button>Baixar Aplicativo</button>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Plant Lens - Projeto Curso Desenv. Sis. Proz</p>
+    </footer>
+
+</body>
+
+</html>
